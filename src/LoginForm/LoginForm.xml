@@ -76,6 +76,17 @@
         <category>Password</category>
         <description>Optional image to be displayed in 'Mask password' button.</description>
     </property>
+	<property key="loginEntity" type="entity" required="false">
+      <caption>Login Object</caption>
+      <category>Behavior</category>
+      <description>Select the entity in which the login info is passed to the login microflow.</description> 
+	</property>
+    <property key="loginmf" type="microflow" required="false" entityProperty="loginEntity">
+      <caption>Login microflow</caption>
+      <category>Behavior</category>
+      <description>Microflow being triggered in case of 'login' onclick</description>
+      <returnType type="Boolean"/>
+  	</property>	
     <property key="forgotmf" type="microflow" required="false">
       <caption>Forgot password microflow</caption>
       <category>Behavior</category>
